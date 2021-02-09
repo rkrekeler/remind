@@ -148,6 +148,7 @@ $endif
         bioigcc         "integrated biomass gasification combined cycle"
         bioigccc        "integrated biomass gasification combined cycle with CCS"
         biogas          "gasification of biomass"
+        biogasc         "gasification of biomass with capture"
         bioftrec        "biomass based fischer-tropsch recycle"
         bioftcrec       "biomass based fischer-tropsch with capture recycle"
         bioh2           "biomass to hydrogen"
@@ -651,9 +652,9 @@ teEs(all_teEs)           "ES technologies which are actually used (to be filled 
 
 sets
 
-   all_regi "all regions" /CAZ,CHA,EUR,IND,JPN,LAM,MEA,NEU,OAS,REF,SSA,USA/
+   all_regi "all regions" /LAM,OAS,SSA,EUR,NEU,MEA,REF,CAZ,CHA,IND,JPN,USA/
 
-   ext_regi "extended regions list (includes subsets of H12 regions)" / EUR_regi,CAZ,CHA,EUR,IND,JPN,LAM,MEA,NEU,OAS,REF,SSA,USA /
+   ext_regi "extended regions list (includes subsets of H12 regions)" / EUR_regi,LAM,OAS,SSA,EUR,NEU,MEA,REF,CAZ,CHA,IND,JPN,USA /
 
    regi_group(ext_regi,all_regi) "region groups (regions that together corresponds to a H12 region)"
       /
@@ -689,38 +690,38 @@ sets
 
    regi2iso(all_regi,iso) "mapping regions to iso countries"
       /
-       CAZ . (AUS,CAN,HMD,NZL,SPM)
-       CHA . (CHN,HKG,MAC,TWN)
-       EUR . (ALA,AUT,BEL,BGR,CYP,CZE,DEU,DNK,ESP,EST)
-       EUR . (FIN,FRA,FRO,GBR,GGY,GIB,GRC,HRV,HUN,IMN)
-       EUR . (IRL,ITA,JEY,LTU,LUX,LVA,MLT,NLD,POL,PRT)
-       EUR . (ROU,SVK,SVN,SWE)
-       IND . (IND)
-       JPN . (JPN)
        LAM . (ABW,AIA,ARG,ATA,ATG,BES,BHS,BLM,BLZ,BMU)
        LAM . (BOL,BRA,BRB,BVT,CHL,COL,CRI,CUB,CUW,CYM)
        LAM . (DMA,DOM,ECU,FLK,GLP,GRD,GTM,GUF,GUY,HND)
        LAM . (HTI,JAM,KNA,LCA,MAF,MEX,MSR,MTQ,NIC,PAN)
        LAM . (PER,PRI,PRY,SGS,SLV,SUR,SXM,TCA,TTO,URY)
        LAM . (VCT,VEN,VGB,VIR)
-       MEA . (ARE,BHR,DZA,EGY,ESH,IRN,IRQ,ISR,JOR,KWT)
-       MEA . (LBN,LBY,MAR,OMN,PSE,QAT,SAU,SDN,SYR,TUN)
-       MEA . (YEM)
-       NEU . (ALB,AND,BIH,CHE,GRL,ISL,LIE,MCO,MKD,MNE)
-       NEU . (NOR,SJM,SMR,SRB,TUR,VAT)
        OAS . (AFG,ASM,ATF,BGD,BRN,BTN,CCK,COK,CXR,FJI)
        OAS . (FSM,GUM,IDN,IOT,KHM,KIR,KOR,LAO,LKA,MDV)
        OAS . (MHL,MMR,MNG,MNP,MYS,NCL,NFK,NIU,NPL,NRU)
        OAS . (PAK,PCN,PHL,PLW,PNG,PRK,PYF,SGP,SLB,THA)
        OAS . (TKL,TLS,TON,TUV,UMI,VNM,VUT,WLF,WSM)
-       REF . (ARM,AZE,BLR,GEO,KAZ,KGZ,MDA,RUS,TJK,TKM)
-       REF . (UKR,UZB)
        SSA . (AGO,BDI,BEN,BFA,BWA,CAF,CIV,CMR,COD,COG)
        SSA . (COM,CPV,DJI,ERI,ETH,GAB,GHA,GIN,GMB,GNB)
        SSA . (GNQ,KEN,LBR,LSO,MDG,MLI,MOZ,MRT,MUS,MWI)
        SSA . (MYT,NAM,NER,NGA,REU,RWA,SEN,SHN,SLE,SOM)
        SSA . (SSD,STP,SWZ,SYC,TCD,TGO,TZA,UGA,ZAF,ZMB)
        SSA . (ZWE)
+       EUR . (ALA,AUT,BEL,BGR,CYP,CZE,DEU,DNK,ESP,EST)
+       EUR . (FIN,FRA,FRO,GBR,GGY,GIB,GRC,HRV,HUN,IMN)
+       EUR . (IRL,ITA,JEY,LTU,LUX,LVA,MLT,NLD,POL,PRT)
+       EUR . (ROU,SVK,SVN,SWE)
+       NEU . (ALB,AND,BIH,CHE,GRL,ISL,LIE,MCO,MKD,MNE)
+       NEU . (NOR,SJM,SMR,SRB,TUR,VAT)
+       MEA . (ARE,BHR,DZA,EGY,ESH,IRN,IRQ,ISR,JOR,KWT)
+       MEA . (LBN,LBY,MAR,OMN,PSE,QAT,SAU,SDN,SYR,TUN)
+       MEA . (YEM)
+       REF . (ARM,AZE,BLR,GEO,KAZ,KGZ,MDA,RUS,TJK,TKM)
+       REF . (UKR,UZB)
+       CAZ . (AUS,CAN,HMD,NZL,SPM)
+       CHA . (CHN,HKG,MAC,TWN)
+       IND . (IND)
+       JPN . (JPN)
        USA . (USA)
       /
 iso_regi "all iso countries and EU and greater China region" /  EUR,CHA,
@@ -752,8 +753,8 @@ iso_regi "all iso countries and EU and greater China region" /  EUR,CHA,
 
    map_iso_regi(iso_regi,all_regi) "mapping from iso countries to regions that represent country" 
          /
-       CHA . CHA
        EUR . EUR
+       CHA . CHA
        IND . IND
        JPN . JPN
        USA . USA
@@ -1034,6 +1035,7 @@ $endif
         bioigcc         "integrated biomass gasification combined cycle"
         bioigccc        "integrated biomass gasification combined cycle with CCS"
         biogas          "gasification of biomass"
+        biogasc         "gasification of biomass with capture"
         bioftrec        "biomass based fischer-tropsch recycle"
         bioftcrec       "biomass based fischer-tropsch with capture recycle"
         bioh2           "biomass to hydrogen"
@@ -1121,6 +1123,7 @@ $endif
   bioigcc         "integrated biomass gasification combined cycle"
   bioigccc        "integrated biomass gasification combined cycle with CCS"
   biogas          "gasification of biomass"
+  biogasc         "gasification of biomass with capture"
   bioftrec        "biomass based fischer-tropsch recycle"
   bioftcrec       "biomass based fischer-tropsch with capture recycle"
   bioh2           "biomass to hydrogen"
@@ -1202,6 +1205,7 @@ $ifthen setGlobal cm_ccsfosall
 $endif
   coalftcrec  "coal based fischer-tropsch with capture recycle"
   coalh2c     "coal to hydrogen with capture"
+  biogasc     "gasification of biomass with capture"
   bioftcrec   "biomass based fischer-tropsch with capture recycle"
   bioh2c      "biomass to hydrogen with capture"
   bioigccc    "integrated biomass gasification combined cycle with CCS"
@@ -1220,6 +1224,7 @@ teBio(all_te)      "biomass energy systems technologies"
         bioigcc     "integrated biomass gasification combined cycle"
         bioigccc    "integrated biomass gasification combined cycle with CCS"
         biogas      "gasification of biomass"
+        biogasc     "gasification of biomass with capture"
         bioftrec    "biomass based fischer-tropsch recycle"
         bioftcrec   "biomass based fischer-tropsch with capture recycle"
         bioh2       "biomass to hydrogen"
@@ -1237,6 +1242,7 @@ teRe(all_te)     "renewable technologies including biomass"
         bioigcc     "integrated biomass gasification combined cycle"
         bioigccc    "integrated biomass gasification combined cycle with CCS"
         biogas      "gasification of biomass"
+        biogasc     "gasification of biomass with capture"
         bioftrec    "biomass based fischer-tropsch recycle"
         bioftcrec   "biomass based fischer-tropsch with capture recycle"
         bioh2       "biomass to hydrogen"
@@ -1330,6 +1336,7 @@ teBioPebiolc(all_te)      "biomass technologies using pebiolc"
         bioigcc
         bioigccc
         biogas
+        biogasc
         bioftrec
         bioftcrec
         bioh2
@@ -2033,6 +2040,7 @@ $endif
         pebiolc.sesobio.biotr
         pebiolc.sesobio.biotrmod
         pebiolc.segabio.biogas
+        pebiolc.segabio.biogasc
         pegeo.seel.geohdr
         pegeo.sehe.geohe
         pehyd.seel.hydro
@@ -2243,6 +2251,9 @@ $endif
         pebiolc.seel.bioigccc.n2o
         pebiolc.seel.bioigcc.n2o
         pebiolc.segabio.biogas.n2o
+        pebiolc.segabio.biogasc.co2
+        pebiolc.segabio.biogasc.cco2
+        pebiolc.segabio.biogasc.n2o
         segabio.fegas.tdbiogas.ch4
 		segafos.fegas.tdfosgas.ch4
 *        cco2.pco2.ccscomp.co2
@@ -2357,7 +2368,7 @@ teSe2rlf(all_te,rlf)        "mapping for techologies to grades. Currently, the i
 /
       (wind,spv,csp,refliq,hydro,geohe,geohdr,solhe,ngcc,ngccc,ngt,gaschp,gashp,gash2,gash2c,gastr,gasftrec,gasftcrec,dot,
        igcc,igccc,pc,coaltr,coalgas,coalh2,coalh2c,coalchp,coalhp,coalftrec,coalftcrec,
-       biotr,biotrmod,biogas,bioftrec,bioftcrec,bioh2,bioh2c,biohp,biochp,bioigcc,bioigccc,
+       biotr,biotrmod,biogas,biogasc,bioftrec,bioftcrec,bioh2,bioh2c,biohp,biochp,bioigcc,bioigccc,
        elh2,h2turb,elh2VRE,h2turbVRE,bioethl,bioeths,biodiesel,tnrs,fnrs
 $ifthen setGlobal cm_ccsfosall
        pcc, pco
