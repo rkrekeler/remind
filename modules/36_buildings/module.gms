@@ -19,5 +19,8 @@ $Ifi "%buildings%" == "off" $include "./modules/36_buildings/off/realization.gms
 $Ifi "%buildings%" == "services_putty" $include "./modules/36_buildings/services_putty/realization.gms"
 $Ifi "%buildings%" == "services_with_capital" $include "./modules/36_buildings/services_with_capital/realization.gms"
 $Ifi "%buildings%" == "simple" $include "./modules/36_buildings/simple/realization.gms"
+$Ifi "%buildings%" == "services_putty_nc" $include "./modules/36_buildings/services_putty_nc/realization.gms"
+$Ifi "%buildings%" == "services_with_capital_nc" $include "./modules/36_buildings/services_with_capital_nc/realization.gms"
+
 *###################### R SECTION END (MODULETYPES) ############################
 *** EOF ./modules/36_buildings/36_buildings.gms
