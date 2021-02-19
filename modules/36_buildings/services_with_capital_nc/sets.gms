@@ -4,7 +4,7 @@
 *** |  AGPL-3.0, you are granted additional permissions described in the
 *** |  REMIND License Exception, version 1.0 (see LICENSE file).
 *** |  Contact: remind@pik-potsdam.de
-*** SOF ./modules/36_buildings/services_with_capital/sets.gms
+*** SOF ./modules/36_buildings/services_with_capital_nc/sets.gms
 Sets
   regi_dyn36(all_regi)   "dynamic region set for compatibility with testOneRegi"
   teEs_dyn36(all_teEs)  "technologies - buildings module additions"
@@ -260,4 +260,4 @@ teEs(teEs_dyn36)         = YES;
 esty(esty_dyn36)     = YES;
 fe2es(fe2es_dyn36)       = YES;
 es2ppfen(es2ppfen_dyn36) = YES;
-*** EOF ./modules/36_buildings/services_with_capital/sets.gms
+*** EOF ./modules/36_buildings/services_with_capital_nc/sets.gms

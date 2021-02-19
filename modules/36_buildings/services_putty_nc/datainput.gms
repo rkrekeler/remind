@@ -4,7 +4,7 @@
 *** |  AGPL-3.0, you are granted additional permissions described in the
 *** |  REMIND License Exception, version 1.0 (see LICENSE file).
 *** |  Contact: remind@pik-potsdam.de
-*** SOF ./modules/36_buildings/services_putty/datainput.gms
+*** SOF ./modules/36_buildings/services_putty_nc/datainput.gms
 *** substitution elasticities
 Parameter 
   p36_cesdata_sigma(all_in)   "substitution elasticities"
@@ -38,7 +38,7 @@ parameter
 p36_floorspace_scen                    "floorspace"
 /
 $ondelim
-$include "./modules/36_buildings/services_putty/input/p36_floorspace_scen.cs4r"
+$include "./modules/36_buildings/services_putty_nc/input/p36_floorspace_scen.cs4r"
 $offdelim
 /
 
@@ -58,7 +58,7 @@ $offdelim
 ;
 
 table f36_datafecostsglob(char,all_teEs)   "end-use (final energy) technologies characteristics"
-$include "./modules/36_buildings/services_putty/input/generisdata_feCapCosts.prn"
+$include "./modules/36_buildings/services_putty_nc/input/generisdata_feCapCosts.prn"
 ;
 
  f36_datafecostsglob("inco0",teEs)            = sm_D2015_2_D2005      * f36_datafecostsglob("inco0",teEs); 
@@ -270,4 +270,4 @@ $endif
 
 pm_fe2es(ttot,regi,teEs_dyn36) = p36_fe2es(ttot,regi,teEs_dyn36);
 pm_shFeCes(ttot,regi,entyFe,in,teEs)$p36_shFeCes(ttot,regi,entyFe,in,teEs) = p36_shFeCes(ttot,regi,entyFe,in,teEs);
-*** EOF ./modules/36_buildings/services_putty/datainput.gms
+*** EOF ./modules/36_buildings/services_putty_nc/datainput.gms

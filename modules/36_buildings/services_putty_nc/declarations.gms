@@ -4,7 +4,7 @@
 *** |  AGPL-3.0, you are granted additional permissions described in the
 *** |  REMIND License Exception, version 1.0 (see LICENSE file).
 *** |  Contact: remind@pik-potsdam.de
-*** SOF ./modules/36_buildings/services_putty/declarations.gms
+*** SOF ./modules/36_buildings/services_putty_nc/declarations.gms
 Scalar
 s36_switch_floor  "switch for the inclusion of the floorspace equations. It should exclude the equations from hybrid" /0/,
 s36_vintage_calib "switch for the inclusion of vintage equations and restricting ttot to historical. It should exclude the equations from hybrid" /0/,
@@ -104,4 +104,4 @@ file_logit_buildings.lw =  0;
 file_logit_buildings.nw = 20;
 file_logit_buildings.nd = 15;
 
-*** EOF ./modules/36_buildings/services_putty/declarations.gms
+*** EOF ./modules/36_buildings/services_putty_nc/declarations.gms

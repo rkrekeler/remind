@@ -4,7 +4,7 @@
 *** |  AGPL-3.0, you are granted additional permissions described in the
 *** |  REMIND License Exception, version 1.0 (see LICENSE file).
 *** |  Contact: remind@pik-potsdam.de
-*** SOF ./modules/36_buildings/services_putty/equations.gms
+*** SOF ./modules/36_buildings/services_putty_nc/equations.gms
 
 *AL* Start of Model solved in preloop for determining the floorspace delta projections
 q36_pathConstraint (ttot,regi) $((s36_switch_floor eq 1) AND (ord(ttot) lt card(ttot)) AND (ttot.val ge cm_startyear)) ..
@@ -159,4 +159,4 @@ q36_shares_obj $ (s36_logit eq 1)..
     ;  
 
 
-*** EOF ./modules/36_buildings/services_putty/equations.gms
+*** EOF ./modules/36_buildings/services_putty_nc/equations.gms

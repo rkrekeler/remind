@@ -4,7 +4,7 @@
 *** |  AGPL-3.0, you are granted additional permissions described in the
 *** |  REMIND License Exception, version 1.0 (see LICENSE file).
 *** |  Contact: remind@pik-potsdam.de
-*** SOF ./modules/36_buildings/services_putty/sets.gms
+*** SOF ./modules/36_buildings/services_putty_nc/sets.gms
 Sets
  regi_dyn36(all_regi)   "dynamic region set for compatibility with testOneRegi"
  regi_dyn36_cooling(all_regi)   "regions with high cooling on which we impose efficiency constraint"
@@ -145,7 +145,7 @@ inViaEs_dyn36(all_in)  "CES inputs which are provided throught the ES pathway"
   
   in_complements_dyn36(all_in)    "in complements"
   /
-  
+
   /
   
   nests_putty_dyn36(all_in,all_in)   "putty nests"
@@ -281,4 +281,4 @@ teEs(teEs_dyn36)         = YES;
 esty(esty_dyn36)     = YES;
 fe2es(fe2es_dyn36)       = YES;
 es2ppfen(es2ppfen_dyn36) = YES;
-*** EOF ./modules/36_buildings/services_putty/sets.gms
+*** EOF ./modules/36_buildings/services_putty_nc/sets.gms

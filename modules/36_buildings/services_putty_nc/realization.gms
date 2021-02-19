@@ -4,7 +4,7 @@
 *** |  AGPL-3.0, you are granted additional permissions described in the
 *** |  REMIND License Exception, version 1.0 (see LICENSE file).
 *** |  Contact: remind@pik-potsdam.de
-*** SOF ./modules/36_buildings/services_putty.gms
+*** SOF ./modules/36_buildings/services_putty_nc.gms
 
 *' @description 
 *' 
@@ -24,13 +24,13 @@
 
 
 *####################### R SECTION START (PHASES) ##############################
-$Ifi "%phase%" == "sets" $include "./modules/36_buildings/services_putty/sets.gms"
-$Ifi "%phase%" == "declarations" $include "./modules/36_buildings/services_putty/declarations.gms"
-$Ifi "%phase%" == "datainput" $include "./modules/36_buildings/services_putty/datainput.gms"
-$Ifi "%phase%" == "equations" $include "./modules/36_buildings/services_putty/equations.gms"
-$Ifi "%phase%" == "preloop" $include "./modules/36_buildings/services_putty/preloop.gms"
-$Ifi "%phase%" == "bounds" $include "./modules/36_buildings/services_putty/bounds.gms"
-$Ifi "%phase%" == "presolve" $include "./modules/36_buildings/services_putty/presolve.gms"
-$Ifi "%phase%" == "postsolve" $include "./modules/36_buildings/services_putty/postsolve.gms"
+$Ifi "%phase%" == "sets" $include "./modules/36_buildings/services_putty_nc/sets.gms"
+$Ifi "%phase%" == "declarations" $include "./modules/36_buildings/services_putty_nc/declarations.gms"
+$Ifi "%phase%" == "datainput" $include "./modules/36_buildings/services_putty_nc/datainput.gms"
+$Ifi "%phase%" == "equations" $include "./modules/36_buildings/services_putty_nc/equations.gms"
+$Ifi "%phase%" == "preloop" $include "./modules/36_buildings/services_putty_nc/preloop.gms"
+$Ifi "%phase%" == "bounds" $include "./modules/36_buildings/services_putty_nc/bounds.gms"
+$Ifi "%phase%" == "presolve" $include "./modules/36_buildings/services_putty_nc/presolve.gms"
+$Ifi "%phase%" == "postsolve" $include "./modules/36_buildings/services_putty_nc/postsolve.gms"
 *######################## R SECTION END (PHASES) ###############################
-*** EOF ./modules/36_buildings/services_putty.gms
+*** EOF ./modules/36_buildings/services_putty_nc.gms

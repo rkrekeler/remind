@@ -4,7 +4,7 @@
 *** |  AGPL-3.0, you are granted additional permissions described in the
 *** |  REMIND License Exception, version 1.0 (see LICENSE file).
 *** |  Contact: remind@pik-potsdam.de
-*** SOF ./modules/36_buildings/services_with_capital/declarations.gms
+*** SOF ./modules/36_buildings/services_with_capital_nc/declarations.gms
 Scalar
 s36_vintage_calib "switch for the inclusion of vintage equations and restricting ttot to historical. It should exclude the equations from hybrid" /0/,
 s36_logit         "switch for the inclusion of vintage equations. It should exclude the equations from hybrid" /0/
@@ -93,4 +93,4 @@ file_logit_buildings.pc =  5; !! csv file
 file_logit_buildings.lw =  0;
 file_logit_buildings.nw = 20;
 file_logit_buildings.nd = 15;
-*** EOF ./modules/36_buildings/services_with_capital/declarations.gms
+*** EOF ./modules/36_buildings/services_with_capital_nc/declarations.gms

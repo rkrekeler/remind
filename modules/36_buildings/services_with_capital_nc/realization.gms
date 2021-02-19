@@ -4,7 +4,7 @@
 *** |  AGPL-3.0, you are granted additional permissions described in the
 *** |  REMIND License Exception, version 1.0 (see LICENSE file).
 *** |  Contact: remind@pik-potsdam.de
-*** SOF ./modules/36_buildings/services_with_capital.gms
+*** SOF ./modules/36_buildings/services_with_capital_nc.gms
 
 *' @description 
 *' 
@@ -23,13 +23,13 @@
 *
 
 *####################### R SECTION START (PHASES) ##############################
-$Ifi "%phase%" == "sets" $include "./modules/36_buildings/services_with_capital/sets.gms"
-$Ifi "%phase%" == "declarations" $include "./modules/36_buildings/services_with_capital/declarations.gms"
-$Ifi "%phase%" == "datainput" $include "./modules/36_buildings/services_with_capital/datainput.gms"
-$Ifi "%phase%" == "equations" $include "./modules/36_buildings/services_with_capital/equations.gms"
-$Ifi "%phase%" == "preloop" $include "./modules/36_buildings/services_with_capital/preloop.gms"
-$Ifi "%phase%" == "bounds" $include "./modules/36_buildings/services_with_capital/bounds.gms"
-$Ifi "%phase%" == "presolve" $include "./modules/36_buildings/services_with_capital/presolve.gms"
-$Ifi "%phase%" == "postsolve" $include "./modules/36_buildings/services_with_capital/postsolve.gms"
+$Ifi "%phase%" == "sets" $include "./modules/36_buildings/services_with_capital_nc/sets.gms"
+$Ifi "%phase%" == "declarations" $include "./modules/36_buildings/services_with_capital_nc/declarations.gms"
+$Ifi "%phase%" == "datainput" $include "./modules/36_buildings/services_with_capital_nc/datainput.gms"
+$Ifi "%phase%" == "equations" $include "./modules/36_buildings/services_with_capital_nc/equations.gms"
+$Ifi "%phase%" == "preloop" $include "./modules/36_buildings/services_with_capital_nc/preloop.gms"
+$Ifi "%phase%" == "bounds" $include "./modules/36_buildings/services_with_capital_nc/bounds.gms"
+$Ifi "%phase%" == "presolve" $include "./modules/36_buildings/services_with_capital_nc/presolve.gms"
+$Ifi "%phase%" == "postsolve" $include "./modules/36_buildings/services_with_capital_nc/postsolve.gms"
 *######################## R SECTION END (PHASES) ###############################
-*** EOF ./modules/36_buildings/services_with_capital.gms
+*** EOF ./modules/36_buildings/services_with_capital_nc.gms

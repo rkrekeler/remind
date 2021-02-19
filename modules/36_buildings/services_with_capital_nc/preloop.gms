@@ -4,7 +4,7 @@
 *** |  AGPL-3.0, you are granted additional permissions described in the
 *** |  REMIND License Exception, version 1.0 (see LICENSE file).
 *** |  Contact: remind@pik-potsdam.de
-*** SOF ./modules/36_buildings/services_with_capital/preloop.gms
+*** SOF ./modules/36_buildings/services_with_capital_nc/preloop.gms
 
 *** Vintage initialisation
 v36_prodEs.lo(ttot,regi,fe2es_dyn36(enty,esty,teEs))      = 0;              
@@ -49,4 +49,4 @@ loop (fe2ces_dyn36(entyFe,esty,teEs,in),
 p36_kapPriceImplicit(t,regi_dyn36(regi),teEs) = p36_kapPrice(t,regi) + p36_implicitDiscRateMarg(t,regi,in);
 );
 
-*** EOF ./modules/36_buildings/services_with_capital/preloop.gms
+*** EOF ./modules/36_buildings/services_with_capital_nc/preloop.gms

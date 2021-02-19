@@ -4,7 +4,7 @@
 *** |  AGPL-3.0, you are granted additional permissions described in the
 *** |  REMIND License Exception, version 1.0 (see LICENSE file).
 *** |  Contact: remind@pik-potsdam.de
-*** SOF ./modules/36_buildings/services_putty/postsolve.gms
+*** SOF ./modules/36_buildings/services_putty_nc/postsolve.gms
 ***Update final energy prices. (if marginal of budget is greater than eps, which happens in case of 4-7)
 p36_fePrice(t,regi_dyn36(regi),entyFe)$(abs (qm_budget.m(t,regi)) gt sm_eps) = abs ( qm_balFeForCesAndEs.m(t,regi,entyFe)) / abs (qm_budget.m(t,regi));
 
@@ -38,4 +38,4 @@ p36_kapPrice(t,regi_dyn36(regi)) =
 p36_demUEtotal(t,regi_dyn36(regi),in)$(p36_demUEtotal(t,regi,in) AND ( NOT t36_hist(t))) = vm_cesIO.L(t,regi,in) + pm_cesdata(t,regi,in,"offset_quantity") ;
 
 
-*** EOF ./modules/36_buildings/services_putty/postsolve.gms
+*** EOF ./modules/36_buildings/services_putty_nc/postsolve.gms

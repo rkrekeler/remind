@@ -4,7 +4,7 @@
 *** |  AGPL-3.0, you are granted additional permissions described in the
 *** |  REMIND License Exception, version 1.0 (see LICENSE file).
 *** |  Contact: remind@pik-potsdam.de
-*** SOF ./modules/36_buildings/services_with_capital/datainput.gms
+*** SOF ./modules/36_buildings/services_with_capital_nc/datainput.gms
 *** substitution elasticities
 Parameter 
   p36_cesdata_sigma(all_in)  "substitution elasticities"
@@ -37,28 +37,28 @@ parameter
 p36_floorspace_scen                    "floorspace"
 /
 $ondelim
-$include "./modules/36_buildings/services_with_capital/input/p36_floorspace_scen.cs4r"
+$include "./modules/36_buildings/services_with_capital_nc/input/p36_floorspace_scen.cs4r"
 $offdelim
 /
 
 p36_demFeForEs_scen  "final energy demand projections for FE-UE technologies"
 /
 $ondelim
-$include "./modules/36_buildings/services_with_capital/input/p36_serviceInputs.cs4r"
+$include "./modules/36_buildings/services_with_capital_nc/input/p36_serviceInputs.cs4r"
 $offdelim
 /
 
 p36_prodEs_scen  "useful energy demand projections for FE-UE technologies"
 /
 $ondelim
-$include "./modules/36_buildings/services_with_capital/input/p36_serviceOutputs.cs4r"
+$include "./modules/36_buildings/services_with_capital_nc/input/p36_serviceOutputs.cs4r"
 $offdelim
 /
 
 ;
 
 table f36_datafecostsglob(char,all_teEs)   "end-use (final energy) technologies characteristics"
-$include "./modules/36_buildings/services_with_capital/input/generisdata_feCapCosts.prn"
+$include "./modules/36_buildings/services_with_capital_nc/input/generisdata_feCapCosts.prn"
 ;
 
 
@@ -68,7 +68,7 @@ $include "./modules/36_buildings/services_with_capital/input/generisdata_feCapCo
  f36_datafecostsglob("omf",teEs)              = sm_DpKW_2_TDpTW       * f36_datafecostsglob("omf",teEs);
 
 table f36_dataeff(char,all_teEs)   "end-use (final energy) long term efficiency assumptions"
-$include "./modules/36_buildings/services_with_capital/input/generisdata_Eff.prn"
+$include "./modules/36_buildings/services_with_capital_nc/input/generisdata_Eff.prn"
 ;
 
 p36_floorspace(ttot,regi) = p36_floorspace_scen(ttot,regi,"%cm_POPscen%") * 1e-3; !! from million to billion m2;
@@ -264,4 +264,4 @@ $endif
 
 pm_fe2es(ttot,regi,teEs_dyn36) = p36_fe2es(ttot,regi,teEs_dyn36);
 pm_shFeCes(ttot,regi,entyFe,in,teEs)$p36_shFeCes(ttot,regi,entyFe,in,teEs) = p36_shFeCes(ttot,regi,entyFe,in,teEs);
-*** EOF ./modules/36_buildings/services_with_capital/datainput.gms
+*** EOF ./modules/36_buildings/services_with_capital_nc/datainput.gms

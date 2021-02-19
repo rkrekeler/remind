@@ -4,7 +4,7 @@
 *** |  AGPL-3.0, you are granted additional permissions described in the
 *** |  REMIND License Exception, version 1.0 (see LICENSE file).
 *** |  Contact: remind@pik-potsdam.de
-*** SOF ./modules/36_buildings/services_with_capital/equations.gms
+*** SOF ./modules/36_buildings/services_with_capital_nc/equations.gms
 
 q36_ueTech2Total(ttot,regi_dyn36(regi),inViaEs_dyn36(in)) $
                                   ( (s36_vintage_calib eq 1 AND t36_hist(ttot) )
@@ -106,4 +106,4 @@ q36_shares_obj $ (s36_logit eq 1)..
     ;  
 
 
-*** EOF ./modules/36_buildings/services_with_capital/equations.gms
+*** EOF ./modules/36_buildings/services_with_capital_nc/equations.gms

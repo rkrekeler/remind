@@ -4,7 +4,7 @@
 *** |  AGPL-3.0, you are granted additional permissions described in the
 *** |  REMIND License Exception, version 1.0 (see LICENSE file).
 *** |  Contact: remind@pik-potsdam.de
-*** SOF ./modules/36_buildings/services_putty/bounds.gms
+*** SOF ./modules/36_buildings/services_putty_nc/bounds.gms
 vm_enerSerAdj.fx("2005",regi,in) = 0; 
 
 if ((cm_noReboundEffect eq 1 ), !! Fix the upper bound of vm_cesIO to the level of input_ref if no rebound is allowed
@@ -40,4 +40,4 @@ v36_vintageInfes.fx(ttot,regi_dyn36(regi),fe2es_dyn36(enty,esty,teEs)) $(
 
 v36_logitInfes.up(t,regi_dyn36(regi),inViaEs_dyn36(in)) = + INF ;  
   
-*** EOF ./modules/36_buildings/services_putty/bounds.gms
+*** EOF ./modules/36_buildings/services_putty_nc/bounds.gms

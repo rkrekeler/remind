@@ -4,7 +4,7 @@
 *** |  AGPL-3.0, you are granted additional permissions described in the
 *** |  REMIND License Exception, version 1.0 (see LICENSE file).
 *** |  Contact: remind@pik-potsdam.de
-*** SOF ./modules/36_buildings/services_putty/preloop.gms
+*** SOF ./modules/36_buildings/services_putty_nc/preloop.gms
 
 v36_floorspace_delta.lo(tall,all_regi) = 1e-6;
 
@@ -77,5 +77,5 @@ loop (fe2ces_dyn36(entyFe,esty,teEs,in),
 p36_kapPriceImplicit(t,regi_dyn36(regi),teEs) = p36_kapPrice(t,regi) + p36_implicitDiscRateMarg(t,regi,in);
 );
 
-*** EOF ./modules/36_buildings/services_putty/preloop.gms
+*** EOF ./modules/36_buildings/services_putty_nc/preloop.gms
 
