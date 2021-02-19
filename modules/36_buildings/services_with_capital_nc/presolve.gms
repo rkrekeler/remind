@@ -4,7 +4,12 @@
 *** |  AGPL-3.0, you are granted additional permissions described in the
 *** |  REMIND License Exception, version 1.0 (see LICENSE file).
 *** |  Contact: remind@pik-potsdam.de
-*** SOF ./modules/36_buildings/services_with_capital/presolve.gms
+
+***skip presolve if set to fixed shares (except first 3 iterations)
+if ((cm_buildings_fixed_shares eq 0) OR (ord(iteration) le 4),
+
+
+*** SOF ./modules/36_buildings/services_with_capital_nc/presolve.gms
 *** For the first iterations, avoid very high prices because of numerical reasons
 if (ord(iteration) le 8,
 
@@ -348,5 +353,7 @@ put "%c_expname%", iteration.tl, t.tl,regi.tl, "norm_diff", "NA" ,in.tl, p36_log
 
 putclose;
 
-*** EOF ./modules/36_buildings/services_with_capital/presolve.gms
+);
+
+*** EOF ./modules/36_buildings/services_with_capital_nc/presolve.gms
 

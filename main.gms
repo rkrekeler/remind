@@ -305,6 +305,8 @@ cm_TaxConvCheck             "switch for enabling tax convergence check in nash m
 cm_flex_tax                 "switch for enabling flexibility tax"
 cm_PriceDurSlope_elh2       "slope of price duration curve of electrolysis"
 cm_FlexTaxFeedback          "switch deciding whether flexibility tax feedback on buildlings and industry electricity prices is on"
+
+cm_buildings_fixed_shares   "switch that disables price adjustment in buildings to represent fixed shares"
 ;
 
 *** --------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -428,6 +430,8 @@ cm_TaxConvCheck = 1; !! def 1, which means tax convergence check is on
 cm_flex_tax = 1; !! def 0
 cm_PriceDurSlope_elh2 = 20; !! def 10
 cm_FlexTaxFeedback = 0; !! def 0, off
+
+cm_buildings_fixed_shares = 0; !! def = 0
 
 *** --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ***                           YOU ARE IN THE WARNING ZONE (DON'T DO CHANGES HERE)
