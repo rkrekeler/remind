@@ -329,6 +329,7 @@ c_H2tdCapCost_stat          "factor to scale H2 transmission and distribution ca
 cm_HeatLim_b                "switch to set maximum share of district heating in FE buildings"
 cm_ElLim_b                  "switch to set maximum share of electricity in FE buildings"
 cm_startIter_EDGET          "starting iteration of EDGE-T"
+cm_buildings_fixed_shares   "switch that disables price adjustment in buildings to represent fixed shares"
 ;
 
 *** --------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -527,6 +528,8 @@ cm_PriceDurSlope_elh2 = 20; !! def 10
 cm_FlexTaxFeedback = 0; !! def 0, off
 
 $setGlobal cm_altFeEmiFac  off        !! def = off	
+
+cm_buildings_fixed_shares = 0; !! def = 0
 
 *** --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ***                           YOU ARE IN THE WARNING ZONE (DON'T DO CHANGES HERE)
